@@ -1,4 +1,5 @@
-const DEV_API = "http://localhost:3002";
+// const DEV_API = "http://localhost:3002";
+const DEV_API = "https://lost-pets-8-back.vercel.app";
 
 //Check if email exist
 export const checkEmail = async (email) => {
