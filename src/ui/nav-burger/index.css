@@ -1,0 +1,15 @@
+.nav__burger {
+  margin: 10px;
+}
+
+.nav__burger div {
+  z-index: 100;
+  width: 36px;
+  height: 7px;
+  background-color: #000000;
+  margin: 5px 0;
+}
+
+.nav__burger .first {
+  margin-top: 0;
+}

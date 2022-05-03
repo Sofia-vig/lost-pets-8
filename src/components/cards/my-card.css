@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  border: solid 4px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding: 13px 0;
+}
+
+.image {
+  width: 60%;
+}
+
+.info {
+  text-align: center;
+  padding: 10px;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.place {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.link {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+}

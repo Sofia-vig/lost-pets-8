@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 33px 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.containerButton {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}

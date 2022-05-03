@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.containerResponse {
+  margin-top: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
