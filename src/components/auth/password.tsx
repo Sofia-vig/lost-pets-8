@@ -16,7 +16,7 @@ export default function Password() {
     const password = e.target.password.value;
     const token = await auth(email, password);
     token && navigate(route);
-    !token && navigate("/profile/info");
+    !token && navigate("/");
   };
 
   return (
