@@ -20,7 +20,7 @@ export const useLastGeo = () => {
 
 //Pets
 export const usePets = () => {
-  const { data, mutate } = useSWR(["/pets"], async () => {
+  const { data, mutate } = useSWR("/pets", async () => {
     const coord = useLastGeo();
     const pets = await getPets(coord);
     return pets.allPets;
@@ -33,7 +33,7 @@ export const useMyPets = () => {
     const pets = await getMyPets();
     return pets.myPets;
   });
-  return { myPets: data || [], pullPets: mutate };
+  return { myPets: data || [], pullMyPets: mutate };
 };
 
 //Report

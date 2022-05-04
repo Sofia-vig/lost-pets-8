@@ -9,6 +9,7 @@ import { useUserEmail, routeValue } from "hooks";
 export default function Password() {
   const navigate = useNavigate();
   const [email, setUserEmail] = useUserEmail();
+  const [error, setError] = useState("");
   const route = routeValue();
 
   const handleSubmit = async (e) => {
@@ -16,7 +17,12 @@ export default function Password() {
     const password = e.target.password.value;
     const token = await auth(email, password);
     token && navigate(route);
-    !token && navigate("/");
+    if (!token) {
+      setError("Contraseña incorrecta");
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    }
   };
 
   return (
@@ -32,6 +38,9 @@ export default function Password() {
         </div>
         <PrimaryButton type="submit">Ingresar</PrimaryButton>
       </form>
+      <div className={css.response}>
+        <h3>{error}</h3>
+      </div>
     </div>
   );
 }
