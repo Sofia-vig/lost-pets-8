@@ -14,6 +14,7 @@ export default function MyInfo() {
   const [email, setEmail] = useUserEmail();
   const navigate = useNavigate();
   const route = routeValue();
+  const routeVal = route == "/profile/info" ? "/" : route;
 
   const handleInicio = () => {
     navigate("/");
@@ -30,16 +31,18 @@ export default function MyInfo() {
       name ? await update(name, password) : await update(password);
       setDone("Tus datos fueron guardados correctamente!");
       setTimeout(() => {
-        navigate(route);
+        navigate(routeVal);
       }, 1000);
     } else if (!password && !passwordVerify) {
       name && (await update(name));
       setDone("Tus datos fueron guardados correctamente!");
       setTimeout(() => {
-        navigate(route);
+        navigate(routeVal);
       }, 1000);
-    } else {
-      setDone("Completa todos los campos");
+    } else if ((password && !passwordVerify) || (passwordVerify && !password)) {
+      setDone("Completa todos los campos!");
+    } else if (password && passwordVerify) {
+      setDone("Las contraseñas no coinciden!");
     }
   };
 

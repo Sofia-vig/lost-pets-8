@@ -25,7 +25,7 @@ export default function Password() {
       <form className={css.form} onSubmit={handleSubmit}>
         <div className={css.item}>
           <label>CONTRASEÑA</label>
-          <input type="text" name="password" className={css.input} />
+          <input type="password" name="password" className={css.input} />
           <a href="#" className={css.passwordForget}>
             OLVIDE MI CONTRASEÑA
           </a>
